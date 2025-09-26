@@ -1,0 +1,96 @@
+# This file was generated automatically from conda-smithy. To update this configuration,
+# update the conda-forge.yml and/or the recipe/meta.yaml.
+# -*- mode: toml -*-
+
+#                             VVVVVV  minimum `pixi` version
+"$schema" = "https://pixi.sh/v0.36.0/schema/manifest/schema.json"
+
+[project]
+name = "mg5amcnlo-pythia8-interface-feedstock"
+version = "3.52.2"  # conda-smithy version used to generate this file
+description = "Pixi configuration for conda-forge/mg5amcnlo-pythia8-interface-feedstock"
+authors = ["@conda-forge/mg5amcnlo-pythia8-interface"]
+channels = ["conda-forge"]
+platforms = ["linux-64", "linux-aarch64", "linux-ppc64le", "osx-64", "win-64"]
+
+[dependencies]
+conda-build = ">=24.1"
+conda-forge-ci-setup = "4.*"
+rattler-build = "*"
+
+[tasks]
+[tasks.inspect-all]
+cmd = "inspect_artifacts --all-packages"
+description = "List contents of all packages found in rattler-build build directory."
+[tasks.build]
+cmd = "rattler-build build --recipe recipe"
+description = "Build mg5amcnlo-pythia8-interface-feedstock directly (without setup scripts), no particular variant specified"
+[tasks."build-linux_64_pythia88.311"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_pythia88.311.yaml"
+description = "Build mg5amcnlo-pythia8-interface-feedstock with variant linux_64_pythia88.311 directly (without setup scripts)"
+[tasks."inspect-linux_64_pythia88.311"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_pythia88.311.yaml"
+description = "List contents of mg5amcnlo-pythia8-interface-feedstock packages built for variant linux_64_pythia88.311"
+[tasks."build-linux_64_pythia88.312"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_pythia88.312.yaml"
+description = "Build mg5amcnlo-pythia8-interface-feedstock with variant linux_64_pythia88.312 directly (without setup scripts)"
+[tasks."inspect-linux_64_pythia88.312"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_pythia88.312.yaml"
+description = "List contents of mg5amcnlo-pythia8-interface-feedstock packages built for variant linux_64_pythia88.312"
+[tasks."build-linux_aarch64_pythia88.311"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_pythia88.311.yaml"
+description = "Build mg5amcnlo-pythia8-interface-feedstock with variant linux_aarch64_pythia88.311 directly (without setup scripts)"
+[tasks."inspect-linux_aarch64_pythia88.311"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_pythia88.311.yaml"
+description = "List contents of mg5amcnlo-pythia8-interface-feedstock packages built for variant linux_aarch64_pythia88.311"
+[tasks."build-linux_aarch64_pythia88.312"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_pythia88.312.yaml"
+description = "Build mg5amcnlo-pythia8-interface-feedstock with variant linux_aarch64_pythia88.312 directly (without setup scripts)"
+[tasks."inspect-linux_aarch64_pythia88.312"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_pythia88.312.yaml"
+description = "List contents of mg5amcnlo-pythia8-interface-feedstock packages built for variant linux_aarch64_pythia88.312"
+[tasks."build-linux_ppc64le_pythia88.311"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_pythia88.311.yaml"
+description = "Build mg5amcnlo-pythia8-interface-feedstock with variant linux_ppc64le_pythia88.311 directly (without setup scripts)"
+[tasks."inspect-linux_ppc64le_pythia88.311"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_pythia88.311.yaml"
+description = "List contents of mg5amcnlo-pythia8-interface-feedstock packages built for variant linux_ppc64le_pythia88.311"
+[tasks."build-linux_ppc64le_pythia88.312"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_pythia88.312.yaml"
+description = "Build mg5amcnlo-pythia8-interface-feedstock with variant linux_ppc64le_pythia88.312 directly (without setup scripts)"
+[tasks."inspect-linux_ppc64le_pythia88.312"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_pythia88.312.yaml"
+description = "List contents of mg5amcnlo-pythia8-interface-feedstock packages built for variant linux_ppc64le_pythia88.312"
+[tasks."build-osx_arm64_pythia88.311"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_pythia88.311.yaml"
+description = "Build mg5amcnlo-pythia8-interface-feedstock with variant osx_arm64_pythia88.311 directly (without setup scripts)"
+[tasks."inspect-osx_arm64_pythia88.311"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_pythia88.311.yaml"
+description = "List contents of mg5amcnlo-pythia8-interface-feedstock packages built for variant osx_arm64_pythia88.311"
+[tasks."build-osx_arm64_pythia88.312"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_pythia88.312.yaml"
+description = "Build mg5amcnlo-pythia8-interface-feedstock with variant osx_arm64_pythia88.312 directly (without setup scripts)"
+[tasks."inspect-osx_arm64_pythia88.312"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_pythia88.312.yaml"
+description = "List contents of mg5amcnlo-pythia8-interface-feedstock packages built for variant osx_arm64_pythia88.312"
+
+[feature.smithy.dependencies]
+conda-smithy = "*"
+shellcheck = "*"
+[feature.smithy.tasks.build-locally]
+cmd = "python ./build-locally.py"
+description = "Build packages locally using the same setup scripts used in conda-forge's CI"
+[feature.smithy.tasks.smithy]
+cmd = "conda-smithy"
+description = "Run conda-smithy. Pass necessary arguments."
+[feature.smithy.tasks.rerender]
+cmd = "conda-smithy rerender"
+description = "Rerender the feedstock."
+[feature.smithy.tasks.lint]
+cmd = "conda-smithy lint --conda-forge recipe"
+description = "Lint the feedstock recipe"
+
+[environments]
+smithy = ["smithy"]
+# This is a copy of default, to be enabled by build_steps.sh during Docker builds
+# __PLATFORM_SPECIFIC_ENV__ = []
