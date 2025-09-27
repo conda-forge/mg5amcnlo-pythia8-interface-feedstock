@@ -1,5 +1,0 @@
-# c.f. https://github.com/conda-forge/staged-recipes/issues/27750 for why not
-# currently using variants.yaml
-pythia8:
-- "8.311"
-- "8.312"
