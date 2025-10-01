@@ -13,13 +13,16 @@ source:
   sha256: 66055e0faac2c1ab0b0bb9d98cf88d80e79040be7d6d27dfb8964b141b802203
 
 build:
-  number: 3
+  number: 4
   skip:
     - win
     # PY8_parallelization is broken on osx-64
     - osx and x86_64
   script:
     # Manually compile MG5aMC_PY8_interface.cc instead of using compile.py
+    - echo "DEBUG DEBUG"
+    - echo "$CXX ./MG5aMC_PY8_interface.cc -o MG5aMC_PY8_interface $CXXFLAGS $(pythia8-config --cxxflags) $LDFLAGS $(pythia8-config --ldflags) -lHepMC"
+    - echo "DEBUG DEBUG"
     - $CXX ./MG5aMC_PY8_interface.cc -o MG5aMC_PY8_interface $CXXFLAGS $(pythia8-config --cxxflags) $LDFLAGS $(pythia8-config --ldflags) -lHepMC
     - echo "UNSPECIFIED" > MG5AMC_VERSION_ON_INSTALL
     # pythia8-config --version added in 8.312, so fall back to
