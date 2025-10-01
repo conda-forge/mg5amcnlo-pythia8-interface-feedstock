@@ -24,7 +24,7 @@ build:
     - echo "$CXX ./MG5aMC_PY8_interface.cc -o MG5aMC_PY8_interface $CXXFLAGS -pthread -DGZIP $LDFLAGS -lpythia8 -lz -lHepMC"
     - $CXX ./MG5aMC_PY8_interface.cc -o MG5aMC_PY8_interface $CXXFLAGS -pthread -DGZIP $LDFLAGS -lpythia8 -lz -lHepMC
     - if: osx
-      then: otool -L ./MG5aMC_PY8_interface
+      then: otool -l ./MG5aMC_PY8_interface
       else: readelf -d ./MG5aMC_PY8_interface
     - echo "DEBUG DEBUG"
     - echo "UNSPECIFIED" > MG5AMC_VERSION_ON_INSTALL
