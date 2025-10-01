@@ -22,11 +22,11 @@ build:
     # Manually compile MG5aMC_PY8_interface.cc instead of using compile.py
     - echo "DEBUG DEBUG"
     - echo "$CXX ./MG5aMC_PY8_interface.cc -o MG5aMC_PY8_interface $CXXFLAGS $(pythia8-config --cxxflags) $LDFLAGS $(pythia8-config --ldflags) -lHepMC"
+    - $CXX ./MG5aMC_PY8_interface.cc -o MG5aMC_PY8_interface $CXXFLAGS $(pythia8-config --cxxflags) $LDFLAGS $(pythia8-config --ldflags) -lHepMC
     - if: osx
       then: otool -L ./MG5aMC_PY8_interface
       else: readelf -d ./MG5aMC_PY8_interface
     - echo "DEBUG DEBUG"
-    - $CXX ./MG5aMC_PY8_interface.cc -o MG5aMC_PY8_interface $CXXFLAGS $(pythia8-config --cxxflags) $LDFLAGS $(pythia8-config --ldflags) -lHepMC
     - echo "UNSPECIFIED" > MG5AMC_VERSION_ON_INSTALL
     # pythia8-config --version added in 8.312, so fall back to
     # get_pythia8_version.py for v8.311.
