@@ -87,7 +87,6 @@ tests:
       # Somehow downloading in advance causes a compilation error on x86 Linux only in CI
       - lhapdf install NNPDF23_lo_as_0130_qed &> download_log.txt
       - mg5_aMC pythia8_test.mg5
-      - cat PYTHIA8_INTERFACE_MG5_RUN/run_01_tag_1_debug.log
 
 about:
   # modified University of Illinois/NCSA license
