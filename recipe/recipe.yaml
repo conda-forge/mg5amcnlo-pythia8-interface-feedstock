@@ -82,7 +82,11 @@ tests:
     requirements:
       run:
         - mg5amcnlo
+        - sed
     script:
+      # DEBUG
+      - if: osx
+        then: find $CONDA_PREFIX/MG5_aMC -type f -exec sed -i 's/DYLD_LIBRARY_PATH/DYLD_FALLBACK_LIBRARY_PATH/g' {} +
       # Download NNPDF23_lo_as_0130_qed in advance to avoid long output in CI logs
       # Somehow downloading in advance causes a compilation error on x86 Linux only in CI
       - lhapdf install NNPDF23_lo_as_0130_qed &> download_log.txt
