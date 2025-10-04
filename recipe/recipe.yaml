@@ -86,6 +86,7 @@ tests:
         - share/mg5amcnlo_pythia8_interface/COMPATIBILITY
         - share/mg5amcnlo_pythia8_interface/MG5AMC_VERSION_ON_INSTALL
         - share/mg5amcnlo_pythia8_interface/PYTHIA8_VERSION_ON_INSTALL
+        - share/mg5amcnlo_pythia8_interface/*.dat
 
         - MG5_aMC/HEPTools/MG5aMC_PY8_interface/MG5aMC_PY8_interface
         - MG5_aMC/HEPTools/MG5aMC_PY8_interface/VERSION
